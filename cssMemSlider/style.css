@@ -1,8 +1,8 @@
 @font-face {
-    font-family: 'Beer money';
-    src: url("./assets/font/beermoney/beermoney.woff2");
-    font-weight: 400;
-    font-style: normal;
+	font-family: 'Beer money';
+	src: url("./assets/font/beermoney/beermoney.woff2");
+	font-weight: 400;
+	font-style: normal;
 }
 
 * {
@@ -44,10 +44,9 @@ body {
 }
 
 .slides {
-	height: 77%;
+	height: 73%;
 	opacity: 0;
 	width: 0;
-	z-index: 0;
 	-webkit-transform: scale(1.5);
 	-moz-transform: scale(1.5);
 	-o-transform: scale(1.5);
@@ -79,23 +78,36 @@ body {
 	background-image: url("./assets/image/4.jpg");
 }
 
+.slider>.slide5 {
+	background-image: url("./assets/image/5.jpg");
+}
+
 #slide1:checked~.slider>.slide1,
 #slide2:checked~.slider>.slide2,
 #slide3:checked~.slider>.slide3,
 #slide4:checked~.slider>.slide4,
+#slide5:checked~.slider>.slide5,
 #slide1:checked~.wrapper-controls>.slider-text>.slide1,
 #slide2:checked~.wrapper-controls>.slider-text>.slide2,
 #slide3:checked~.wrapper-controls>.slider-text>.slide3,
-#slide4:checked~.wrapper-controls>.slider-text>.slide4 {
+#slide4:checked~.wrapper-controls>.slider-text>.slide4,
+#slide5:checked~.wrapper-controls>.slider-text>.slide5 {
 	opacity: 1;
 	display: block;
-	z-index: 1;
 	width: 50%;
 	transition: 1s;
 	-webkit-transform: scale(1);
 	-moz-transform: scale(1);
 	-o-transform: scale(1);
 	transform: scale(1);
+}
+
+#slide1:checked~.wrapper-controls>.slider-text>.slide1,
+#slide2:checked~.wrapper-controls>.slider-text>.slide2,
+#slide3:checked~.wrapper-controls>.slider-text>.slide3,
+#slide4:checked~.wrapper-controls>.slider-text>.slide4,
+#slide5:checked~.wrapper-controls>.slider-text>.slide5 {
+	width: 100%;
 }
 
 .wrapper>input {
@@ -109,14 +121,12 @@ body {
 	width: inherit;
 	flex-direction: row-reverse;
 	align-items: center;
-	align-content: center;
 }
 
-.wrapper .controls {
-	width: 20rem;
+.controls {
+	width: 22rem;
 	display: flex;
 	justify-content: space-around;
-	
 }
 
 .wrapper-label div {
@@ -130,23 +140,21 @@ body {
 	-moz-border-radius: 50%;
 	-o-border-radius: 50%;
 	border-radius: 50%;
-	-webkit-transition: background ease-in-out .5s;
-	-moz-transition: background ease-in-out .5s;
-	-o-transition: background ease-in-out .5s;
-	transition: background ease-in-out .5s;
 	transition: 1s;
 }
-.wrapper-label:hover > div{
+
+.wrapper-label:hover>div {
 	background-color: burlywood;
 	border-color: burlywood;
 }
 
-#slide1:checked ~ .wrapper-controls .controls .wrapper-label-1 div,
-#slide2:checked ~ .wrapper-controls .controls .wrapper-label-2 div,
-#slide3:checked ~ .wrapper-controls .controls .wrapper-label-3 div,
-#slide4:checked ~ .wrapper-controls .controls .wrapper-label-4 div{
+#slide1:checked~.wrapper-controls .controls .wrapper-label-1 div,
+#slide2:checked~.wrapper-controls .controls .wrapper-label-2 div,
+#slide3:checked~.wrapper-controls .controls .wrapper-label-3 div,
+#slide4:checked~.wrapper-controls .controls .wrapper-label-4 div,
+#slide5:checked~.wrapper-controls .controls .wrapper-label-5 div {
 	background: inherit;
-}	
+}
 
 .wrapper-label {
 	cursor: pointer;
@@ -154,7 +162,7 @@ body {
 	height: 4rem;
 	width: 4rem;
 	align-items: center;
-    justify-content: center;
+	justify-content: center;
 }
 
 .wrapper-label:hover {
@@ -163,7 +171,6 @@ body {
 
 .slider-text {
 	display: flex;
-	height: auto;
 	align-items: center;
 	font-size: 2rem;
 }
