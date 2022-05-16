@@ -119,7 +119,7 @@ body {
 	
 }
 
-.wrapper label {
+.wrapper-label div {
 	border: 0.5rem solid #ddd;
 	background: #ddd;
 	cursor: pointer;
@@ -136,15 +136,15 @@ body {
 	transition: background ease-in-out .5s;
 	transition: 1s;
 }
-.wrapper-label:hover > label{
+.wrapper-label:hover > div{
 	background-color: burlywood;
 	border-color: burlywood;
 }
 
-#slide1:checked ~ .wrapper-controls .controls .wrapper-label-1 label,
-#slide2:checked ~ .wrapper-controls .controls .wrapper-label-2 label,
-#slide3:checked ~ .wrapper-controls .controls .wrapper-label-3 label,
-#slide4:checked ~ .wrapper-controls .controls .wrapper-label-4 label{
+#slide1:checked ~ .wrapper-controls .controls .wrapper-label-1 div,
+#slide2:checked ~ .wrapper-controls .controls .wrapper-label-2 div,
+#slide3:checked ~ .wrapper-controls .controls .wrapper-label-3 div,
+#slide4:checked ~ .wrapper-controls .controls .wrapper-label-4 div{
 	background: inherit;
 }	
 
