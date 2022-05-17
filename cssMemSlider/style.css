@@ -102,14 +102,6 @@ body {
 	transform: scale(1);
 }
 
-#slide1:checked~.wrapper-controls>.slider-text>.slide1,
-#slide2:checked~.wrapper-controls>.slider-text>.slide2,
-#slide3:checked~.wrapper-controls>.slider-text>.slide3,
-#slide4:checked~.wrapper-controls>.slider-text>.slide4,
-#slide5:checked~.wrapper-controls>.slider-text>.slide5 {
-	width: 100%;
-}
-
 .wrapper>input {
 	display: none;
 }
